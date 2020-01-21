@@ -75,8 +75,6 @@ public class EditPhotoController {
         updateList(photo);
         editPhotoStage.close();
 
-        //TODO trzeba dodać pobieranie skądś maila użytkownika, jakieś logowanie albo coś podobnego i potem tu go wkładać
-        //MailSender.send("filtraxxx@gmail.com");
     }
 
     @FXML
@@ -84,9 +82,7 @@ public class EditPhotoController {
         editPhotoStage.close();
     }
 
-    /**
-     * 200 IQ sposób na updateowanie observable list przy edycji elementu
-     */
+
     private void updateList(Photo p) throws CloneNotSupportedException {
         Photo tmp = (Photo) p.cloneButPublic(p);
         photos.add(tmp);
