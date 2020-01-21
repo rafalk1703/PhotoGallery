@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.rosomaki.controller.AlbumController">
+   <children>
+      <ListView fx:id="photoList" layoutX="23.0" layoutY="49.0" prefHeight="298.0" prefWidth="553.0" />
+      <Button fx:id="closeWindowButton" layoutX="23.0" layoutY="361.0" mnemonicParsing="false" onAction="#closeWindowAction" text="Close Album" />
+      <Button fx:id="addPhotoButton" layoutX="263.0" layoutY="361.0" mnemonicParsing="false" onAction="#addPhotoAction" text="Add Photo" />
+      <ToolBar layoutX="367.0" layoutY="356.0" prefHeight="38.0" prefWidth="207.0">
+        <items>
+          <Button fx:id="deletePhotoButton" mnemonicParsing="false" onAction="#deletePhotoAction" prefHeight="26.0" prefWidth="69.0" text="Delete" />
+            <Button fx:id="editPhotoButton" mnemonicParsing="false" onAction="#editPhotoAction" prefHeight="26.0" prefWidth="53.0" text="Edit" />
+            <Button fx:id="viewPhotoButton" mnemonicParsing="false" onAction="#openPhotoViewAction" prefHeight="26.0" prefWidth="62.0" text="View" />
+        </items>
+      </ToolBar>
+      <ChoiceBox fx:id="sortBox" layoutX="77.0" layoutY="14.0" prefHeight="27.0" prefWidth="118.0" />
+      <Text layoutX="23.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sort by" />
+      <Button fx:id="sortButton" layoutX="201.0" layoutY="14.0" mnemonicParsing="false" onAction="#sortAction" text="Sort" />
+      <Button fx:id="findButton" layoutX="541.0" layoutY="14.0" mnemonicParsing="false" onAction="#findAction" text="Find" />
+      <Label layoutX="255.0" layoutY="19.0" text="Find by" />
+      <ChoiceBox fx:id="findBox" layoutX="308.0" layoutY="14.0" prefHeight="27.0" prefWidth="118.0" />
+      <TextField fx:id="findTextField" layoutX="432.0" layoutY="14.0" prefHeight="27.0" prefWidth="102.0" />
+   </children>
+</AnchorPane>

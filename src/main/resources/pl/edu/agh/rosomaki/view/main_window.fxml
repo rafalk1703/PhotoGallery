@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.rosomaki.controller.MainWindowController">
+   <children>
+      <Button fx:id="addAlbumButton" layoutX="265.0" layoutY="343.0" mnemonicParsing="false" onAction="#addAlbumAction" text="Add Album">
+         <effect>
+            <ColorAdjust />
+         </effect></Button>
+      <ListView fx:id="albumList" layoutX="11.0" layoutY="44.0" prefHeight="280.0" prefWidth="577.0" />
+      <Button fx:id="closeWindowButton" layoutX="14.0" layoutY="343.0" mnemonicParsing="false" onAction="#closeWindowAction" text="Close Window" />
+      <ToolBar layoutX="452.0" layoutY="333.0" prefHeight="46.0" prefWidth="137.0">
+        <items>
+          <Button fx:id="deleteAlbumButton" mnemonicParsing="false" onAction="#deleteAlbumAction" prefHeight="26.0" prefWidth="58.0" text="Delete" />
+            <Button fx:id="viewAlbumButton" mnemonicParsing="false" onAction="#openAlbumViewAction" prefHeight="26.0" prefWidth="58.0" text="Open" />
+        </items>
+      </ToolBar>
+      <Button fx:id="setMailButton" layoutX="129.0" layoutY="343.0" mnemonicParsing="false" onAction="#setMailAction" text="Set MailAddress" />
+      <Button fx:id="sortButton" layoutX="29.0" layoutY="13.0" mnemonicParsing="false" onAction="#sortAction" text="Sort by name" />
+   </children>
+</AnchorPane>
